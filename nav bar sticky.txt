@@ -1,0 +1,47 @@
+<---HTML--->
+<div class="header">
+<nav class="navbar">
+<ul class="menu">
+<li><a href="">Home</a></li>
+<li><a href="">About</a></li>
+<li><a href="">Contact</a></li>
+<li><a href="">Projects</a></li>
+<li><a href="">Portfolio</a></li>
+</ul>
+</nav>
+</div>
+
+<----JS script--->
+
+<script>
+var navbar = document.getElementById("navbar");
+var menu = document.getelementById("menu");
+
+window.onscroll =function(){
+if(window.pageYOffset>= menu.offsetTop){
+navbar.classList.add("sticky");
+}
+else{
+navbar.classList.remove("sticky");
+}
+}
+
+</script>
+
+
+<--css-->
+navbar.sticky{
+position: fixed;
+top:0;
+left:0;
+padding: 10px 8%;
+background: black;
+display:flex;
+align-items:center;
+justify-content: space-between;
+transition:paddig 1s;
+}
+
+navbar.sticky ul{
+width: auto;
+}
